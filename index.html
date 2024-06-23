@@ -3,32 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Scrolling Website</title>
+    <title>Cool Parallax Scrolling Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <section class="parallax" id="section1">
         <div class="content">
             <h1>Welcome to Parallax World</h1>
             <p>Scroll down to see the effect</p>
         </div>
     </section>
-    <section class="content-section" id="section2">
+    <section class="content-section" id="about">
         <div class="content">
-            <h2>Section 2</h2>
-            <p>This is another content section.</p>
+            <h2>About Me</h2>
+            <p>Here is some information about me.</p>
+            <button class="button">Learn More</button>
+        </div>
+    </section>
+    <section class="parallax" id="section2">
+        <div class="content">
+            <h2>My Work</h2>
+            <p>Here is some of my work.</p>
+            <button class="button">View More</button>
+        </div>
+    </section>
+    <section class="content-section" id="work">
+        <div class="content">
+            <h2>Projects</h2>
+            <p>These are some of my projects.</p>
         </div>
     </section>
     <section class="parallax" id="section3">
         <div class="content">
-            <h2>Section 3</h2>
-            <p>Another parallax background</p>
+            <h2>Contact</h2>
+            <p>Get in touch with me.</p>
+            <button class="button">Contact Me</button>
         </div>
     </section>
-    <section class="content-section" id="section4">
+    <section class="content-section" id="contact">
         <div class="content">
-            <h2>Section 4</h2>
-            <p>Last content section.</p>
+            <h2>Contact Information</h2>
+            <p>Email: example@example.com</p>
+            <p>Phone: (123) 456-7890</p>
         </div>
     </section>
     <script src="script.js"></script>
