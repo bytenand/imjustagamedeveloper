@@ -1,0 +1,45 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#section1 {
+    background-image: url('https://via.placeholder.com/1920x1080');
+}
+
+#section2, #section4 {
+    background-color: #333;
+    color: #fff;
+}
+
+#section3 {
+    background-image: url('https://via.placeholder.com/1920x1080');
+}
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    text-align: center;
+}

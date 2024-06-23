@@ -3,44 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Test Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 10px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Test Website</h1>
-    </header>
-    <main>
-        <h2>Hello World!</h2>
-        <p>This is a basic HTML website for testing purposes. Feel free to modify the content as needed.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Test Website</p>
-    </footer>
+    <section class="parallax" id="section1">
+        <div class="content">
+            <h1>Welcome to Parallax World</h1>
+            <p>Scroll down to see the effect</p>
+        </div>
+    </section>
+    <section class="content-section" id="section2">
+        <div class="content">
+            <h2>Section 2</h2>
+            <p>This is another content section.</p>
+        </div>
+    </section>
+    <section class="parallax" id="section3">
+        <div class="content">
+            <h2>Section 3</h2>
+            <p>Another parallax background</p>
+        </div>
+    </section>
+    <section class="content-section" id="section4">
+        <div class="content">
+            <h2>Section 4</h2>
+            <p>Last content section.</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
