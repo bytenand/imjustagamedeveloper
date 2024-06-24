@@ -1,17 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just a game dev</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
-    <img src="images/RobloxScreenShot20240623_143014848.png" class="backgroundImage">
-    <img src="images/RobloxScreenShot20240623_154049647-removebg-preview.png" class="leaves1">
-</body>
+    <div class="top-nav">
+        <div class="top-nav-button-container">
+            <div class="top-nav-button-content-container">
+                <button class="top-nav-button" onclick="selectButton(this)" id="home-button">Home</button>
+            </div>
+            <div class="top-nav-button-content-container">
+                <button class="top-nav-button" onclick="selectButton(this)" id="about-button">About</button>
+            </div>
+            <div class="top-nav-button-content-container">
+                <button class="top-nav-button" onclick="selectButton(this)" id="work-button">Work</button>
+            </div>
+            <div class="top-nav-button-content-container">
+                <button class="top-nav-button" onclick="selectButton(this)" id="contact-button">Contact</button>
+            </div>         
+        </div>
+    </div>
 
+    <div class="line-container">
+        <div class="line"></div>
+    </div>
+
+    <div class="top-nav-header-container">
+        <h1 class="top-nav-header">&lt;/&gt; JUST A DEV</h1>
+    </div>
+
+    <div class="home-section">
+        <p class="plating-text">
+            <span class="plate">
+                2024
+            </span> <span class="important-plate">
+                GAME DEVELOPER, FULLSTACK DEVELOPER
+            </span> AND <span class="important-plate">
+                BACKEND ENGINEER.
+            </span>
+        </p>
+    </div>
+
+    <div class="line-container">
+        <div class="line"></div>
+    </div>
+
+    <div class="quick-info-section">
+        <div class="quick-info-section-bar">
+            <div class="quick-info-sector">
+                <h4 class="quick-info-header">
+                    Programming
+                </h4>
+                <p class="quick-info-description">
+                    5y+ Expertise
+                </p>
+            </div>
+
+            <div class="quick-info-sector">
+                <h4 class="quick-info-header">
+                    UI/UX Design
+                </h4>
+                <p class="quick-info-description">
+                    4y+ Expertise
+                </p>
+            </div>
+
+            <div class="quick-info-sector">
+                <h4 class="quick-info-header">
+                    Building
+                </h4>
+                <p class="quick-info-description">
+                    4y+ Expertise
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-info-section">
+        <div class="quick-info-section-bar">
+            <div class="quick-info-sector">
+                <h4 class="quick-info-header">
+                    Career
+                </h4>
+                <p class="quick-info-description">
+                    5y+ Expertise
+                </p>
+            </div>
+
+            <div class="quick-info-sector">
+                <h4 class="quick-info-header">
+                    Language
+                </h4>
+                <p class="quick-info-description">
+                    English
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="line-container">
+        <div class="line"></div>
+    </div>
+
+    <div class="about-section">
+        <p class="plating-text-no-margin">
+            <span class="plate">
+                ABOUT ME
+            </span>
+        </p>
+
+        <p class="section-text">
+            Hi, I'm an <span class="section-text-key-word">18-year-old</span> programmer with a passion for technology and innovation. My journey in programming began in <span class="section-text-key-word">2018</span> on an old laptop, and since then, I've accumulated a plethora of experience in a variety of areas.
+        </p>
+
+        <p class="section-text">
+            I've had the opportunity to work on a variety of personal projects, and real games that have allowed me to expand my knowledge and skill set.
+        </p>
+    </div>
+
+    <div class="line-container">
+        <div class="line"></div>
+    </div>
+
+    <div class="why-me-section">
+        <p class="plating-text-no-margin">
+            <span class="plate">
+                WHY ME?
+            </span>
+        </p>
+        <p class="section-text">
+            When I approach programming, I adhere to a set of principles that ensure my code is not only functional but also maintains high standards of quality and efficiency. I encapsulate this philosophy with the acronym <span class="section-text-key-word">CRESC</span>, which stands for:
+        </p>
+        <div class="section-dot-container">
+            <div>
+                <h4 class="section-dot-container-header">
+                    &bull; Clean
+                </h4>
+                <p class="section-dot-container-description">
+                    Clean code is at the heart of my philosophy. I follow best practices for code organization and structure, keeping my codebase tidy and well-documented.
+                </p>
+            </div>
+            <div>
+                <h4 class="section-dot-container-header">
+                    &bull; Reliable
+                </h4>
+                <p class="section-dot-container-description">
+                    Reliability is key in my work. I ensure that my code performs consistently under various conditions and meets the required standards for robustness and stability.
+                </p>
+            </div>
+            <div>
+                <h4 class="section-dot-container-header">
+                    &bull; Efficient
+                </h4>
+                <p class="section-dot-container-description">
+                    My code is optimized for performance, ensuring that it runs swiftly and makes the best use of resources.
+                </p>
+            </div>
+            <div>
+                <h4 class="section-dot-container-header">
+                    &bull; Scalable
+                </h4>
+                <p class="section-dot-container-description">
+                    My code is designed to handle growth and can easily be expanded or modified to meet increasing demands without sacrificing performance.
+                </p>
+            </div>
+            <div>
+                <h4 class="section-dot-container-header">
+                    &bull; Creative
+                </h4>
+                <p class="section-dot-container-description">
+                    I strive to bring creativity into my coding, finding innovative solutions to complex problems and making my projects unique and engaging.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="line-container">
+        <div class="line"></div>
+    </div>
+
+    <div class="work-section">
+        <p class="plating-text-no-margin">
+            <span class="plate">
+                MY WORK
+            </span>
+        </p>
+        <p class="section-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, tempore! Cum velit, quas eaque officiis accusamus laboriosam recusandae impedit accusantium quae, sed, aliquam molestiae necessitatibus ipsa aspernatur consequuntur! Molestiae, rerum. Quos veniam accusamus consectetur. Repellat fugiat explicabo, eaque dolorum cum minus nostrum totam nobis ullam, dignissimos inventore harum vero fuga.
+        </p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
 </html>
