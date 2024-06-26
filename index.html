@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Just A Dev</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,23 +23,25 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="top-nav">
+    <div class="top-nav" id="top-nav">
         <div class="top-nav-button-container">
             <div class="top-nav-button-content-container">
-                <button class="top-nav-button" onclick="selectButton(this)" id="home-button">Home</button>
+                <button class="top-nav-button" onclick="selectButton(this); scrollToTop()" id="home-button">Home</button>
             </div>
             <div class="top-nav-button-content-container">
-                <button class="top-nav-button" onclick="selectButton(this)" id="about-button">About</button>
+                <button class="top-nav-button" onclick="selectButton(this); scrollToDiv('about-section')" id="about-button">About</button>
             </div>
             <div class="top-nav-button-content-container">
-                <button class="top-nav-button" onclick="selectButton(this)" id="work-button">Work</button>
+                <button class="top-nav-button" onclick="selectButton(this); scrollToDiv('work-section')" id="work-button">Work</button>
             </div>
             <div class="top-nav-button-content-container">
-                <button class="top-nav-button" onclick="selectButton(this)" id="contact-button">Contact</button>
+                <button class="top-nav-button" onclick="selectButton(this); scrollToDiv('contact-section')" id="contact-button">Contact</button>
             </div>         
         </div>
     </div>
 
+    <div class="fake-top-nav"></div>
+    
     <div class="line-container">
         <div class="line"></div>
     </div>
@@ -46,23 +50,19 @@
         <h1 class="top-nav-header">&lt;/&gt; JUST A DEV</h1>
     </div>
 
-    <div class="home-section">
+    <section class="home-section" id="home-section">
         <p class="plating-text">
             <span class="plate">
                 2024
-            </span> <span class="important-plate">
-                GAME DEVELOPER, FULLSTACK DEVELOPER
-            </span> AND <span class="important-plate">
-                BACKEND ENGINEER.
-            </span>
+            </span> <span class="important-plate">GAME DEVELOPER, FULLSTACK DEVELOPER</span> AND&nbsp;<span class="important-plate">SYSTEMATIC ENGINEER.</span>
         </p>
-    </div>
+    </section>
 
     <div class="line-container">
         <div class="line"></div>
     </div>
 
-    <div class="quick-info-section">
+    <section class="quick-info-section">
         <div class="quick-info-section-bar">
             <div class="quick-info-sector">
                 <h4 class="quick-info-header">
@@ -73,6 +73,8 @@
                 </p>
             </div>
 
+            <p class="section-text">&bull;</p>
+
             <div class="quick-info-sector">
                 <h4 class="quick-info-header">
                     UI/UX Design
@@ -81,6 +83,8 @@
                     4y+ Expertise
                 </p>
             </div>
+
+            <p class="section-text">&bull;</p>
 
             <div class="quick-info-sector">
                 <h4 class="quick-info-header">
@@ -91,35 +95,13 @@
                 </p>
             </div>
         </div>
-    </div>
-
-    <div class="quick-info-section">
-        <div class="quick-info-section-bar">
-            <div class="quick-info-sector">
-                <h4 class="quick-info-header">
-                    Career
-                </h4>
-                <p class="quick-info-description">
-                    5y+ Expertise
-                </p>
-            </div>
-
-            <div class="quick-info-sector">
-                <h4 class="quick-info-header">
-                    Language
-                </h4>
-                <p class="quick-info-description">
-                    English
-                </p>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <div class="line-container">
         <div class="line"></div>
     </div>
 
-    <div class="about-section">
+    <section class="about-section" id="about-section">
         <p class="plating-text-no-margin">
             <span class="plate">
                 ABOUT ME
@@ -127,83 +109,420 @@
         </p>
 
         <p class="section-text">
-            Hi, I'm an <span class="section-text-key-word">18-year-old</span> programmer with a passion for technology and innovation. My journey in programming began in <span class="section-text-key-word">2018</span> on an old laptop, and since then, I've accumulated a plethora of experience in a variety of areas.
+            Hi, I'm an <span class="section-text-key-word">18-year-old</span> programmer with a passion for technology and innovation. I've contributed to over <span class="section-text-key-word">9,000,000+</span> visits and multiple games. My journey in programming began in <span class="section-text-key-word">2018</span> on an old laptop, and since then, I've accumulated a plethora of experience in a variety of areas.
         </p>
 
         <p class="section-text">
             I've had the opportunity to work on a variety of personal projects, and real games that have allowed me to expand my knowledge and skill set.
         </p>
-    </div>
+    </section>
 
-    <div class="line-container">
-        <div class="line"></div>
-    </div>
-
-    <div class="why-me-section">
+    <section class="why-me-section">
         <p class="plating-text-no-margin">
-            <span class="plate">
+            <span class="plate-small">
                 WHY ME?
             </span>
         </p>
+
         <p class="section-text">
-            When I approach programming, I adhere to a set of principles that ensure my code is not only functional but also maintains high standards of quality and efficiency. I encapsulate this philosophy with the acronym <span class="section-text-key-word">CRESC</span>, which stands for:
+            When I approach programming, I adhere to a set of principles that ensure my code is not only functional but also maintains high standards of quality and efficiency. I encapsulate this philosophy with the acronym <span class="section-text-key-word">SERM</span>, which stands for:
         </p>
+
         <div class="section-dot-container">
-            <div>
-                <h4 class="section-dot-container-header">
-                    &bull; Clean
-                </h4>
-                <p class="section-dot-container-description">
-                    Clean code is at the heart of my philosophy. I follow best practices for code organization and structure, keeping my codebase tidy and well-documented.
-                </p>
+            <div class="section-dot-container-content">
+                <div>
+                    <img src="images/scalability.png" alt="" class="section-dot-content-image">
+                </div>
+                <div>
+                    <h4 class="section-dot-container-header">
+                        &bull; Scalability
+                    </h4>
+                    <p class="section-dot-container-description">
+                        I try my very best to ensure the code that I write is as long-term reliable as possible. The way I do this is by adding flexability to my systems. This allows potential future developers to add onto what's already been written, without any extra effort.
+                    </p>
+                </div>
             </div>
-            <div>
-                <h4 class="section-dot-container-header">
-                    &bull; Reliable
-                </h4>
-                <p class="section-dot-container-description">
-                    Reliability is key in my work. I ensure that my code performs consistently under various conditions and meets the required standards for robustness and stability.
-                </p>
+            <div class="section-dot-container-content">
+                <div>
+                    <img src="images/efficient.png" alt="" class="section-dot-content-image">
+                </div>
+                <div>
+                    <h4 class="section-dot-container-header">
+                        &bull; Efficiency
+                    </h4>
+                    <p class="section-dot-container-description">
+                        Alongside scalability, I ensure that my code is as efficient as possible. The way I do this, is by following all the up-to-date best practices. In addition to that, I ensure that my code isn't using any more logic than what it has to. That applies to algorithms as well.
+                    </p>
+                </div>
             </div>
-            <div>
-                <h4 class="section-dot-container-header">
-                    &bull; Efficient
-                </h4>
-                <p class="section-dot-container-description">
-                    My code is optimized for performance, ensuring that it runs swiftly and makes the best use of resources.
-                </p>
+            <div class="section-dot-container-content">
+                <div>
+                    <img src="images/reliable.png" alt="" class="section-dot-content-image">
+                </div>
+                <div>
+                    <h4 class="section-dot-container-header">
+                        &bull; Reliability
+                    </h4>
+                    <p class="section-dot-container-description">
+                        And with efficiency, must come reliability. Efficient code is awesome, but if it's not reliable, all that efficiency goes to waste! Which is why I ensure my code is reliable. Within the framework I use, I ensure that any potential errors are accounted for with my debugging module.
+                    </p>
+                </div>
             </div>
-            <div>
-                <h4 class="section-dot-container-header">
-                    &bull; Scalable
-                </h4>
-                <p class="section-dot-container-description">
-                    My code is designed to handle growth and can easily be expanded or modified to meet increasing demands without sacrificing performance.
-                </p>
-            </div>
-            <div>
-                <h4 class="section-dot-container-header">
-                    &bull; Creative
-                </h4>
-                <p class="section-dot-container-description">
-                    I strive to bring creativity into my coding, finding innovative solutions to complex problems and making my projects unique and engaging.
-                </p>
+            <div class="section-dot-container-content">
+                <div>
+                    <img src="images/modular.png" alt="" class="section-dot-content-image">
+                </div>
+                <div>
+                    <h4 class="section-dot-container-header">
+                        &bull; Modular
+                    </h4>
+                    <p class="section-dot-container-description">
+                        What goes well with code that is scalable, efficient and reliable? Modularity! I make my code as modular as possible. Splitting up functions into sub-modules which makes navigating the main module far easier for potential future developers.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
+
+        <p class="section-text">
+            Additionally, I love working with other developers to create awesome, innovating things. 
+        </p>
+    </section>
 
     <div class="line-container">
         <div class="line"></div>
     </div>
 
-    <div class="work-section">
+    <section class="work-section" id="work-section">
         <p class="plating-text-no-margin">
             <span class="plate">
                 MY WORK
             </span>
         </p>
+
         <p class="section-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, tempore! Cum velit, quas eaque officiis accusamus laboriosam recusandae impedit accusantium quae, sed, aliquam molestiae necessitatibus ipsa aspernatur consequuntur! Molestiae, rerum. Quos veniam accusamus consectetur. Repellat fugiat explicabo, eaque dolorum cum minus nostrum totam nobis ullam, dignissimos inventore harum vero fuga.
+            I love coming up with new and innovative systems. Here's a quick look at the technical side of what I do:
+        </p>
+
+        <div class="work-section-content">
+            <div class="work-section-content-container-image">
+                <img src="images/framework.png" alt="" class="work-section-image" id="framework-image">
+            </div>
+
+            <div class="work-section-content-container">
+                <h4 class="work-section-content-header">
+                    Modular Framework Design:
+                </h4>
+    
+                <p class="work-section-content-description">
+                    When I first started programming, I found it frustrating to have my content scattered everywhere. To solve this, I began developing a framework that would work for me and any future developers. That's how the first version of the framework came to be, created during a personal project. It wasn't perfect, but it was a solid start. The second version, however, showed much more promise and is displayed on the left.
+                </p>
+
+                <p class="work-section-content-description">
+                    This version of the framework has many advantages, though it does have a few drawbacks. A significant pro is the networking module. With this module, you can easily access a remote event from anywhere within the <span class="code">.Network</span> folder. Another great feature is how simple it is to develop a base system. All you need to do is create a module within any of the <span class="code">Framework</span> modules and add some initiation code:
+                </p>
+
+                <p class="work-section-content-description">
+                    <pre class="code"><code><span class="keyword-print">local</span> MyModule = {}<br><br><span class="keyword-print">function</span> <span class="function">MyModule.<span class="keyword-local">initiate</span></span>()<br>    <span class="function-name">print</span>(<span class="string">"Module initiated!"</span>)<br><span class="keyword-print">end</span><span class="keyword-print"><br><br>return</span> <span class="keyword">MyModule</span></code></pre>
+                </p>
+            </div>
+        </div>
+
+        <div class="work-section-content">
+            <div class="work-section-content-container-video">
+                <video src="videos/chunk system.mp4" alt="" class="work-section-video" onplay="addStareElement(this, 15)" autoplay loop muted style="outline: none;"></video>
+                <video src="videos/chunk system 2.mp4" alt="" class="work-section-video" onplay="addStareElement(this, 15)" autoplay loop muted></video>
+            </div>
+
+            <div class="work-section-content-container">
+                <h4 class="work-section-content-header">
+                    3D Chunk System Design:
+                </h4>
+    
+                <p class="work-section-content-description">
+                    Those little cubes might not look very complex, but there's a lot happening behind the scenes. This system was originally designed for multiple use cases, like generating an infinite plane around the player's character or camera.
+                </p>
+
+                <p class="work-section-content-description">
+                    But that's not all! Since this system is based on Object-Oriented Programming (OOP), we have several methods and functions at our disposal. For example, the <span class="code">:SetAxis(axis, state)</span> method lets you disable a specific axis within the 3D space. In the second video, you'll see that both the 'x' and 'y' axes have been disabled.
+                </p>
+
+                <p class="work-section-content-description">
+                    You can also disable the chunk system with the <span class="code">:SetActive(state)</span> method.
+                </p>
+            </div>
+        </div>
+
+        <div class="work-section-content">
+            <div class="work-section-content-container-video">
+                <video src="videos/number formatter.mp4" alt="" class="work-section-video" onplay="addStareElement(this, 15)" autoplay loop muted style="outline: none;"></video>
+            </div>
+
+            <div class="work-section-content-container">
+                <h4 class="work-section-content-header">
+                    Number Formatting:
+                </h4>
+                
+                <p class="work-section-content-description">
+                    Let's take a look at my number abbreviator/formatter. This small yet complex module is designed to display our base 10 number system in various ways.
+                </p>
+
+                <p class="work-section-content-description">
+                    The formatter supports multiple types of formatting, including time formats. The video on the left provides a quick showcase of most of these formats.
+                </p>
+            </div>
+        </div>
+
+        <div class="work-section-content">
+            <div class="work-section-content-container-video">
+                <video src="videos/pathlink showcase.mp4" alt="" class="work-section-video" onplay="addStareElement(this, 15)" autoplay loop muted style="outline: none;"></video>
+            </div>
+
+            <div class="work-section-content-container">
+                <h4 class="work-section-content-header">
+                    Pathlink Module:
+                </h4>
+                
+                <p class="work-section-content-description">
+                    This neat module creates a path between two points. It's primarily used in tutorials, or guidance on maps.
+                </p>
+
+                <p class="work-section-content-description">
+                    It supports a variety of customization, from changing the style of each point, to custom marker points along the path.
+                </p>
+            </div>
+        </div>
+
+        <div class="work-section-content">
+            <div class="work-section-content-container-video">
+                <video src="videos/loading screen showcase.mp4" alt="" class="work-section-video" onplay="addStareElement(this, 15)" autoplay loop muted style="outline: none;"></video>
+            </div>
+
+            <div class="work-section-content-container">
+                <h4 class="work-section-content-header">
+                    Loading Screen:
+                </h4>
+                
+                <p class="work-section-content-description">
+                    A simple, but effortless way to ensure a proper user experience. This loading screen waits for all content to be loaded before letting the player play. This ensures the player has an optimal experience.
+                </p>
+            </div>
+        </div>
+
+        <div class="work-section-content">
+            <div class="work-section-content-container-video">
+                <video src="videos/softshutdown showcase.mp4" alt="" class="work-section-video" onplay="addStareElement(this, 15)" autoplay loop muted style="outline: none;"></video>
+            </div>
+
+            <div class="work-section-content-container">
+                <h4 class="work-section-content-header">
+                    Soft Shutdown:
+                </h4>
+                
+                <p class="work-section-content-description">
+                    This soft shutdown module is used to reduce losing players when updating an experience. Upon a server initating a shutdown, the server will delay it slightly and migrate all present players into a reserved server. After a few seconds, all the players will be teleported back into a new, updated server.
+                </p>
+
+                <p class="work-section-content-description">
+                    Additionally, the user interface is fully customizable and flexible to any necessary changes.
+                </p>
+            </div>
+        </div>
+
+        <div class="work-section-content-main">
+            <div class="work-section-content-container-main">
+                <h4 class="work-section-content-header">
+                    Personal Project:
+                </h4>
+                
+                <p class="work-section-content-description">
+                    Lastly, I'd like to share my project related to boats. It's a personal endeavor through which I've been enhancing my skills and gaining deeper insights into specific libraries and services.
+                </p>
+
+                <p class="work-section-content-description">
+                    To provide a brief overview of the game, you navigate an infinite ocean in search of something. Your journey starts on a small, neutral island. You interact with the boat seller to obtain your first boat and then with the boat docker to embark on your voyage. Along the way, you encounter islands that may hold items for both your boat and yourself. The items vary based on the island's difficulty level. Some islands are fraught with pirates who attack upon sighting you, while others are calmer but offer fewer items.
+                </p>
+
+                <p class="work-section-content-description">
+                    Here are a few videos highlighting various aspects of the game:
+                </p>
+
+                <div class="work-section-row-coloumn-showcase">
+                    <div class="work-section-row-coloumn-showcase-container">
+                        <video src="videos/main menu showcase.mp4" alt="" class="work-section-video-large" id="numberformatter-video" onplay="addStareElement(this, 20)" autoplay loop muted style="outline: none;"></video>
+
+                        <div class="work-section-row-coloumn-showcase-text-container">
+                            <h5 class="work-section-content-header">
+                                Book Menu:
+                            </h5>
+                            
+                            <p class="work-section-content-description">
+                                A highly flexible menu that can accommodate up to ten distinct categories, which I refer to as pages. I designed both the functionality and user interface elements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work-section-row-coloumn-showcase-container">
+                        <video src="videos/hotbar showcase.mp4" alt="" class="work-section-video-large" id="numberformatter-video" onplay="addStareElement(this, 20)" autoplay loop muted style="outline: none;"></video>
+
+                        <div class="work-section-row-coloumn-showcase-text-container">
+                            <h5 class="work-section-content-header">
+                                Custom Hotbar:
+                            </h5>
+                            
+                            <p class="work-section-content-description">
+                                An easily editable hotbar that incorporates a custom inventory system. This particular hotbar utilizes a spring module to add dynamic movement to each element.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work-section-row-coloumn-showcase-container">
+                        <video src="videos/proximity prompt showcase.mp4" alt="" class="work-section-video-large" id="numberformatter-video" onplay="addStareElement(this, 20)" autoplay loop muted style="outline: none;"></video>
+
+                        <div class="work-section-row-coloumn-showcase-text-container">
+                            <h5 class="work-section-content-header">
+                                Custom Proximity Prompts:
+                            </h5>
+                            
+                            <p class="work-section-content-description">
+                                While standard proximity prompts are useful, they often lack the flexibility needed. To address this, I developed my own module to create reliable and versatile proximity prompts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work-section-row-coloumn-showcase-container">
+                        <video src="videos/dialogue showcase.mp4" alt="" class="work-section-video-large" id="numberformatter-video" onplay="addStareElement(this, 20)" autoplay loop muted style="outline: none;"></video>
+
+                        <div class="work-section-row-coloumn-showcase-text-container">
+                            <h5 class="work-section-content-header">
+                                Custom Dialogue:
+                            </h5>
+                            
+                            <p class="work-section-content-description">
+                                I've always had a passion for designing dialogues, from the simplest to the most intricate. This particular design emphasizes minimalism and is easy on the eyes.
+                            </p>
+
+                            <p class="work-section-content-description">
+                                In addition to its visual appeal, there's a custom language built-in that allows for cool text styling features such as word delay and text colouring.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="section-text">
+            If you'd like to try out the project for yourself, you can view it <a href="https://www.roblox.com/games/15489483755/Framework-test" target="_blank">here</a>. There's a plethora of content that I wasn't able to include, such as:
+        </p>
+
+        <div class="section-dot-container">
+            <div class="section-dot-container-content">
+                <p class="section-dot-container-header-dim">
+                    &bull; Custom Death Screen.
+                </p>
+            </div>
+            <div class="section-dot-container-content">
+                <p class="section-dot-container-header-dim">
+                    &bull; Custom Hunger & Thirst Bars.
+                </p>
+            </div>
+            <div class="section-dot-container-content">
+                <p class="section-dot-container-header-dim">
+                    &bull; Custom Tab Leaderboard.
+                </p>
+            </div>
+            <div class="section-dot-container-content">
+                <p class="section-dot-container-header-dim">
+                    &bull; Custom Leaderboards.
+                </p>
+            </div>
+            <div class="section-dot-container-content">
+                <p class="section-dot-container-header-dim">
+                    &bull; Custom Soft Shutdown.
+                </p>
+            </div>
+            <div class="section-dot-container-content">
+                <p class="section-dot-container-header-dim">
+                    &bull; Custom Pathfinding Display.
+                </p>
+            </div>
+            <div class="section-dot-container-content">
+                <p class="section-dot-container-header-dim-small">
+                    And&nbsp;
+                </p>
+                <p class="section-dot-container-header-dim">
+                    &bull; Custom Tutorial System.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="line-container">
+        <div class="line"></div>
+    </div>
+
+    <section class="contact-section" id="contact-section">
+        <p class="plating-text-no-margin">
+            <span class="plate">
+                LETS COLLABORATE
+            </span>
+        </p>
+
+        <p class="section-text">
+            If you're interested in hiring me for commissions, whether part-time or full-time, please feel free to contact me through any of the methods listed below:
+        </p>
+
+        <div class="contact-info-section-bar">
+            <div class="contact-info-sector"> 
+                <img src="images/discord-mark-white.png" alt="Discord Logo" class="contact-image">
+
+                <div class="contact-info-sector-split">
+                    <h4 class="contact-info-header">
+                        DISCORD
+                    </h4>
+                    <a class="contact-button" href="https://discord.gg/AQAvxxTjJY" target="_blank">
+                        Visit
+                    </a>
+                </div>
+            </div>
+
+            <p class="section-text">&bull;</p>
+
+            <div class="contact-info-sector"> 
+                <img src="images/Guilded_Logomark_White.png" alt="Guilded Logo" class="contact-image-medium">
+
+                <div class="contact-info-sector-split">
+                    <h4 class="contact-info-header">
+                        GUILDED
+                    </h4>
+                    <a class="contact-button" href="https://www.guilded.gg/u/101" target="_blank">
+                        Visit
+                    </a>
+                </div>
+            </div>
+
+            <p class="section-text">&bull;</p>
+
+            <div class="contact-info-sector"> 
+                <img src="images/logo-white.png" alt="X Logo" class="contact-image-small">
+
+                <div class="contact-info-sector-split">
+                    <h4 class="contact-info-header">
+                        X<span class="contact-info-header-lower">/TWITTER</span>
+                    </h4>
+                    <a class="contact-button" href="https://x.com/weakmetatable" target="_blank">
+                        Visit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom">
+        <p class="bottom-text">
+            Copyright &copy; 2024 - All rights reserved
+        </p>
+        <p class="bottom-text-bold">
+            IM JUST A DEV
         </p>
     </div>
 
