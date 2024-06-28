@@ -15,10 +15,11 @@ selectButton(homeButton)
 function scrollToDiv(divId) {
     const div = document.getElementById(divId);
 
-    let offset = -100
+    let offsetVh = 10;
+    let offsetPx = (offsetVh / 100) * window.innerHeight;
 
     const elementPosition = div.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ top: elementPosition + offset, behavior: 'smooth' });
+    window.scrollTo({ top: elementPosition - offsetPx, behavior: 'smooth' });
 }
 
 function scrollToTop() {
@@ -41,6 +42,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
         updateTopNav(scrollAmount)
     })
+
+    function observeFromName(name) {
+        const elements = document.querySelectorAll(name);
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(entry.target.dataset.animation);
+                }
+            });
+        });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+
+    observeFromName(".about-section")
+    observeFromName(".why-me-section")
+    observeFromName(".work-section-content")
+    observeFromName(".work-section-row-coloumn-showcase-container")
+    observeFromName(".section-dot-container-content")
 })
 
 let elements = []
@@ -65,13 +88,13 @@ function updateIndividualElement(element, mouseX, mouseY, MAX_ANGLE) {
     const deltaX = mouseX - centerX;
     const deltaY = mouseY - centerY;
 
-    let angleY = (deltaX / centerX) * 30;
-    let angleX = (deltaY / centerY) * -30;
+    const angleY = (deltaX / boundingRect.width) * 2 * MAX_ANGLE;
+    const angleX = (deltaY / boundingRect.height) * -2 * MAX_ANGLE;
+    
+    const clampedAngleX = Math.max(-MAX_ANGLE, Math.min(MAX_ANGLE, angleX));
+    const clampedAngleY = Math.max(-MAX_ANGLE, Math.min(MAX_ANGLE, angleY));
 
-    angleX = Math.max(-MAX_ANGLE, Math.min(MAX_ANGLE, angleX));
-    angleY = Math.max(-MAX_ANGLE, Math.min(MAX_ANGLE, angleY));
-
-    element.style.transform = `translate(0, 0) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+    element.style.transform = `translate(0, 0) rotateX(${clampedAngleX}deg) rotateY(${clampedAngleY}deg)`;
 }
 
 document.addEventListener('mousemove', (e) => {
