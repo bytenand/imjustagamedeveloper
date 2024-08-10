@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(10, 15, 14);
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    color: rgb(255, 255, 255);
+    opacity: 0.9;
+    font-family: "Poppins";
+}
+
+.ContainerDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.ContentDiv {
+    display: flex;
+    justify-content: center;
+}
