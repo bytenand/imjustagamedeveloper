@@ -3,6 +3,7 @@ body {
     background-color: #32071C;
 }
 
+
 html, body {
     overflow-x: hidden;
 }
@@ -64,7 +65,7 @@ html, body {
     z-index: -2;
 }
 
-.ContentContainer {
+.AboutMe {
     height: auto;
     width: 100%;
     background: linear-gradient(to bottom, #32071C, #32103e);
@@ -101,7 +102,7 @@ html, body {
 
 .ArrowDown {
     width: 2.5vw;
-    height: auto;
+    height: 1.5vw;
     animation: bgColorShift 1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
@@ -160,13 +161,17 @@ About me container and child elements
     margin-right: 20%;
 }
 
-.AboutMeText, .LongAboutMe {
+.AboutMeText, .LongAboutMe, .RegularText {
     color: white;
     font-family: Poppins;
     font-weight: 300;
-    font-size: 1.25vw;
+    font-size: 25px;
     margin: 0;
     margin-bottom: 100px;
+}
+
+.RegularText {
+    margin-bottom: auto;
 }
 
 .LongAboutMe {
@@ -177,6 +182,63 @@ About me container and child elements
     color: rgb(198, 174, 255);
     font-family: Poppins;
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 45px;
     margin: 0;
+}
+
+/*
+
+
+Cave elements
+
+
+*/
+
+.Experience {
+    height: 1000px;
+    width: 100%;
+    background: linear-gradient(to top, #32071C, #32103e);
+    z-index: 200;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ExperiencePanel {
+    height: 500px;
+    width: 350px;
+    background-color: #320f3a;
+    margin-right: 20px;
+    padding: 12px;
+}
+
+.ExperiencePanelContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.CaveContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    background-color: #32071C;
+}
+
+.CaveTop, .CaveBottom {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    z-index: 35;
+    position: relative;
+    overflow: clip;
+    margin: 0;
+    padding: 0;
+    display: block;
 }
