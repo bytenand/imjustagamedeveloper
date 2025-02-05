@@ -11,7 +11,7 @@ html, body {
     width: 100%;
 }
 
-.Foreground2, .Foreground3, .Skyscape, .TopClouds, .BottomClouds, .Mountains {
+.ForegroundRocks, .BackgroundRocks, .TopClouds, .BottomClouds, .Mountains {
     width: 100%;
     height: auto;
     color: #32071C;
@@ -19,9 +19,10 @@ html, body {
     top: 0;
     left: 0;
     z-index: 3;
+    will-change: transform;
 }
 
-.Foreground1 {
+.Foreground {
     max-width: 100%;
     width: 100%;
     height: auto;
@@ -33,16 +34,20 @@ html, body {
     display: block;
 }
 
-.Foreground2 {
+.ForegroundRocks {
     z-index: 2;
 }
 
-.Foreground3 {
+.BackgroundRocks {
     z-index: 1;
 }
 
 .Skyscape {
     z-index: -3;
+    background: linear-gradient(to bottom, #D094BE, #FF9479, #FF5050);
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .TopClouds {
@@ -59,10 +64,70 @@ html, body {
     z-index: -2;
 }
 
-.HeaderContainer {
-    height: 2500px;
+.ContentContainer {
+    height: 3500px;
     width: 100%;
-    background-color: #32071C;
+    background: linear-gradient(to bottom, #32071C, #5f1c78);
     z-index: 200;
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.Topbar {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5vw;
+}
+
+@keyframes bgColorShift {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.ScrollDownLabel {
+    font-weight: 900;
+    font-family: Comfortaa;
+    color: white;
+    font-size: 3.25vw;
+    margin-bottom: 10px;
+}
+
+.ArrowDown {
+    width: 2.5vw;
+    height: auto;
+    animation: bgColorShift 1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+
+
+/*
+
+
+All styles below are only for ContentContainer child elements
+
+
+*/
+
+
+
+.CodeLabel {
+    margin-top: 0;
+    color: white;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 8vw;
+}
+
+.IntroLabel {
+    margin-top: 0;
+    margin-left: 1vw;
+    color: rgb(148, 198, 255);
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 8vw;
 }
