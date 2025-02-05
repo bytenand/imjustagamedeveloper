@@ -65,13 +65,15 @@ html, body {
 }
 
 .ContentContainer {
-    height: 3500px;
+    height: auto;
     width: 100%;
-    background: linear-gradient(to bottom, #32071C, #5f1c78);
+    background: linear-gradient(to bottom, #32071C, #32103e);
     z-index: 200;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 
 .Topbar {
@@ -114,20 +116,67 @@ All styles below are only for ContentContainer child elements
 */
 
 
-
-.CodeLabel {
-    margin-top: 0;
-    color: white;
-    font-family: Poppins;
-    font-weight: 700;
-    font-size: 8vw;
+.HeroContainer {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
-.IntroLabel {
+.JustADevLabel, .FullstackGameLabel, .DeveloperLabel {
     margin-top: 0;
     margin-left: 1vw;
-    color: rgb(148, 198, 255);
     font-family: Poppins;
     font-weight: 700;
     font-size: 8vw;
+    margin-top: -4vw;
+    margin-bottom: 0;
+}
+
+.JustADevLabel {
+    color: rgb(255, 24, 78);
+}
+
+.FullstackGameLabel {
+    color: rgb(236, 60, 116);
+}
+
+.DeveloperLabel {
+    color: rgb(236, 83, 208);
+}
+
+/*
+
+
+About me container and child elements
+
+
+*/
+
+.AboutMeContainer {
+    align-items: flex-end;
+    justify-content: center;
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.AboutMeText, .LongAboutMe {
+    color: white;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 1.25vw;
+    margin: 0;
+    margin-bottom: 100px;
+}
+
+.LongAboutMe {
+    margin-left: 50px;
+}
+
+.AboutMeHeaderText {
+    color: rgb(198, 174, 255);
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 2vw;
+    margin: 0;
 }
