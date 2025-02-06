@@ -52,7 +52,7 @@ html, body {
     z-index: -4;
     background: linear-gradient(to bottom, #D094BE, #FF9479, #FF5050);
     width: 100%;
-    height: 100%;
+    height: 70vw;
     position: absolute;
 }
 
@@ -163,17 +163,16 @@ About me container and child elements
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 50px;
 }
 
 .SkillsContainer {
     margin: 0;
     flex-direction: column;
     display: flex;
-    min-width: 300px;
-    max-width: 300px;
-    width: 300px;
+    flex: 0.5;
 }
 
 .SkillButton {
@@ -184,7 +183,7 @@ About me container and child elements
     margin-right: 1px;
     font-family: Poppins;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
     color: #ffc0d9;
     background-color: #8c3c56;
     border-radius: 2px;
@@ -241,7 +240,7 @@ About me container and child elements
 }
 
 .LongAboutMeContainer {
-    flex: 0.5;
+    flex: 0.7;
 }
 
 /*
