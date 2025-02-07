@@ -18,7 +18,7 @@ a {
 }
 
 .ForegroundRocks, .BackgroundRocks, .TopClouds, .BottomClouds, .Mountains, .Sun {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     color: #32071C;
     position: absolute;
@@ -75,7 +75,6 @@ a {
 }
 
 .AboutMe {
-    height: auto;
     width: 100%;
     background: linear-gradient(to bottom, #32071C, #29212d);
     z-index: 200;
