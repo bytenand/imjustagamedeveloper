@@ -9,6 +9,10 @@ html, body {
     overscroll-behavior: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .GroundContainer {
     width: 100%;
 }
@@ -159,6 +163,7 @@ Hero content elements
 
 .JustADevLabel {
     color: rgb(255 24 78);
+    margin-top: 10vh;
 }
 
 .FullstackGameLabel {
@@ -295,13 +300,14 @@ Profile link elements
     padding-right: 14px;
     background-color: #855f6f;
     border-radius: 32px;
-    transition: 0.1s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.15s ease-in-out;
     outline: 0px solid #634753;
+    box-shadow: 0 0 rgba(255, 255, 255, 0);
 }
 
 .ProfileContainer:hover {
-    /*outline: 4px solid #634753;*/
     background-color: #be859c;
+    box-shadow: 0 5px 12px -5px rgb(255, 193, 193)
 }
 
 .ProfileImage {

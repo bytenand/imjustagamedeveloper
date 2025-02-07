@@ -5,13 +5,13 @@ function clamp(x, min, max) {
 document.addEventListener("DOMContentLoaded", () => {
     const parallaxClasses = [".JustADevLabel", ".DeveloperLabel", ".FullstackGameLabel", ".AboutMeText", ".HeaderText", ".LongAboutMeText", ".SkillButton"];
     const stopPoint = window.innerHeight;
-    
+
     document.addEventListener("scroll", function () {
         let scrollY = window.scrollY;
-        
+
         let scrollHeight = document.documentElement.scrollHeight;
         let allowedScrollHeight = scrollHeight / 3;
-    
+
         document.querySelector(".ForegroundRocks").style.transform = `translateY(${clamp(scrollY * 0.35, 0, allowedScrollHeight)}px)`;
         document.querySelector(".BackgroundRocks").style.transform = `translateY(${clamp(scrollY * 0.45, 0, allowedScrollHeight)}px)`;
         document.querySelector(".Skyscape").style.transform = `translateY(${clamp(scrollY * 0.5, 0, allowedScrollHeight)}px)`;
@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll(className).forEach(element => {
                 let elementRect = element.getBoundingClientRect();
                 let elementTop = elementRect.top;
-                
-                if (elementTop < stopPoint) { 
+
+                if (elementTop < stopPoint) {
                     let moveAmount = Math.min((stopPoint - elementTop) * 0.4, stopPoint / 8);
                     let opacityAmount = Math.min((stopPoint - elementTop) / stopPoint * 4, 1);
 
@@ -35,25 +35,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
-
-
     }, { passive: true });
 
     function adjustMargins() {
+        let innerWidth = window.innerWidth
         let aboutMeContainer = document.querySelector(".AboutMeContainer");
 
-        if (!aboutMeContainer) {
-            console.error("Element with class 'AboutMeContainer' not found!");
-            return;
-        }
-
-        if (window.innerWidth < 1362) {
+        if (innerWidth < 1362) {
             aboutMeContainer.style.marginLeft = "5%";
             aboutMeContainer.style.marginRight = "5%";
         } else {
             aboutMeContainer.style.marginLeft = "15%";
             aboutMeContainer.style.marginRight = "15%";
         }
+
+        let justADevLabel = document.querySelector(".JustADevLabel");
+        if (innerWidth < 500) {
+            justADevLabel.style.marginTop = "13vh";
+        } else if (innerWidth < 1100) {
+            justADevLabel.style.marginTop = "9vh";
+        } else {
+            justADevLabel.style.marginTop = "0";
+        }
+
     }
 
     adjustMargins();
