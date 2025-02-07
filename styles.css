@@ -113,15 +113,17 @@ html, body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.AboutMeText, .LongAboutMeText, .RegularText, .LongExperienceText {
-    color: white;
+.AboutMeText, .LongAboutMeText, .RegularText, .CaveText {
+    color: #f0b9bf;
     font-family: Poppins;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 25px;
     margin: 0;
-    margin-bottom: 50px;
+    z-index: 45;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .RegularText {
@@ -129,11 +131,10 @@ html, body {
 }
 
 
-
 /*
 
 
-All styles below are only for ContentContainer child elements
+Hero content elements
 
 
 */
@@ -147,12 +148,13 @@ All styles below are only for ContentContainer child elements
 
 .JustADevLabel, .FullstackGameLabel, .DeveloperLabel {
     margin-top: 0;
-    margin-left: 1vw;
+    margin-left: 0;
     font-family: Poppins;
     font-weight: 700;
     font-size: 8vw;
     margin-top: -4vw;
     margin-bottom: 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .JustADevLabel {
@@ -180,9 +182,10 @@ About me container and child elements
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: -150px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .ButtonContainer {
@@ -209,6 +212,7 @@ About me container and child elements
     border-radius: 2px;
     cursor: pointer;
     transition: 0.2s;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .SkillButton:hover {
@@ -225,13 +229,16 @@ About me container and child elements
 }
 
 .LongAboutMeText {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 4%;
+    margin-right: 4%;
     margin-top: 68px;
+    margin-bottom: 50px;
+    min-width: 260px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .BriefAboutMeContainer {
-    flex: 0.5;
+    flex: 0.85;
 }
 
 .LongAboutMeContainer {
@@ -263,16 +270,8 @@ About me container and child elements
 /*
 
 
-Experience stuff
+Profile link elements
 
-
-
-
-.ExperiencePanelContainer {
-    background-color: #120e14;
-    width: 800px;
-    height: 800px;
-}
 
 */
 
@@ -281,6 +280,7 @@ Experience stuff
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 .ProfileContainer {
@@ -289,8 +289,7 @@ Experience stuff
     justify-content: center;
     width: auto;
     height: 32px;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin: 8px;
     padding: 10px;
     padding-left: 14px;
     padding-right: 14px;
@@ -300,13 +299,14 @@ Experience stuff
     outline: 0px solid #634753;
 }
 
+.ProfileContainer:hover {
+    /*outline: 4px solid #634753;*/
+    background-color: #be859c;
+}
+
 .ProfileImage {
     width: 24px;
     height: auto;
-}
-
-.ProfileContainer:hover {
-    outline: 4px solid #634753;
 }
 
 .ProfileLinkText {
