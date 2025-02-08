@@ -6,20 +6,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const parallaxClasses = [".JustADevLabel", ".DeveloperLabel", ".FullstackGameLabel", ".AboutMeText", ".HeaderText", ".LongAboutMeText", ".SkillButton"];
     const stopPoint = window.innerHeight;
 
+    const topClouds = document.querySelector(".TopClouds")
+    const foregroundRocks = document.querySelector(".ForegroundRocks")
+    const backgroundRocks = document.querySelector(".BackgroundRocks")
+    const bottomClouds = document.querySelector(".BottomClouds")
+    const mountains = document.querySelector(".Mountains")
+    const sun = document.querySelector(".Sun")
+    const skyscape = document.querySelector(".Skyscape")
+
     document.addEventListener("scroll", function () {
         let scrollY = window.scrollY;
 
         let scrollHeight = document.documentElement.scrollHeight;
         let allowedScrollHeight = scrollHeight / 3;
-
-        document.querySelector(".ForegroundRocks").style.transform = `translateY(${clamp(scrollY * 0.35, 0, allowedScrollHeight)}px)`;
-        document.querySelector(".BackgroundRocks").style.transform = `translateY(${clamp(scrollY * 0.45, 0, allowedScrollHeight)}px)`;
-        document.querySelector(".Skyscape").style.transform = `translateY(${clamp(scrollY * 0.5, 0, allowedScrollHeight)}px)`;
-        document.querySelector(".TopClouds").style.transform = `translateY(${clamp(scrollY * 0.85, 0, allowedScrollHeight)}px)`;
-        document.querySelector(".BottomClouds").style.transform = `translateY(${clamp(scrollY * 0.75, 0, allowedScrollHeight)}px)`;
-        document.querySelector(".Mountains").style.transform = `translateY(${clamp(scrollY * 0.4, 0, allowedScrollHeight)}px)`;
-        document.querySelector(".Sun").style.transform = `translateY(${clamp(scrollY * 0.6, 0, allowedScrollHeight)}px)`;
-        document.querySelector(".Skyscape").style.transform = `translateY(${clamp(scrollY * 0.4, 0, allowedScrollHeight)}px)`;
+        
+        foregroundRocks.style.transform = `translateY(${clamp(scrollY * 0.35, 0, allowedScrollHeight)}px)`;
+        backgroundRocks.style.transform = `translateY(${clamp(scrollY * 0.45, 0, allowedScrollHeight)}px)`;
+        topClouds.style.transform = `translateY(${clamp(scrollY * 0.85, 0, allowedScrollHeight)}px)`;
+        bottomClouds.style.transform = `translateY(${clamp(scrollY * 0.75, 0, allowedScrollHeight)}px)`;
+        mountains.style.transform = `translateY(${clamp(scrollY * 0.4, 0, allowedScrollHeight)}px)`;
+        sun.style.transform = `translateY(${clamp(scrollY * 0.6, 0, allowedScrollHeight)}px)`;
+        skyscape.style.transform = `translateY(${clamp(scrollY * 0.4, 0, allowedScrollHeight)}px)`;
 
         parallaxClasses.forEach(className => {
             document.querySelectorAll(className).forEach(element => {
