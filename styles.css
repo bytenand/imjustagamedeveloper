@@ -30,7 +30,6 @@ a {
 
 .Foreground {
     max-width: 100%;
-    width: 100%;
     height: auto;
     z-index: 25;
     position: relative;
