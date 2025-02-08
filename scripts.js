@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const mountains = document.querySelector(".Mountains")
     const sun = document.querySelector(".Sun")
     const skyscape = document.querySelector(".Skyscape")
-
+    
     document.addEventListener("scroll", function () {
         let scrollY = window.scrollY;
 
         let scrollHeight = document.documentElement.scrollHeight;
         let allowedScrollHeight = scrollHeight / 3;
-        
+
         foregroundRocks.style.transform = `translateY(${clamp(scrollY * 0.35, 0, allowedScrollHeight)}px)`;
         backgroundRocks.style.transform = `translateY(${clamp(scrollY * 0.45, 0, allowedScrollHeight)}px)`;
         topClouds.style.transform = `translateY(${clamp(scrollY * 0.85, 0, allowedScrollHeight)}px)`;
