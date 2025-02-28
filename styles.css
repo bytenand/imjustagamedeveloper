@@ -19,7 +19,7 @@ a {
     position: absolute;
 }
 
-.ForegroundRocks, .BackgroundRocks, .TopClouds, .BottomClouds, .Mountains, .Sun {
+.ForegroundRocks, .BackgroundRocks, .TopClouds, .BottomClouds, .Mountains {
     max-width: 100%;
     height: auto;
     color: #32071C;
@@ -28,7 +28,6 @@ a {
     left: 0;
     z-index: 3;
     will-change: transform;
-    /*transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);*/
 }
 
 .Foreground {
@@ -42,8 +41,34 @@ a {
     display: block;
 }
 
+.SunContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vw;
+    width: 100%;
+}
+
+@keyframes sun-glow {
+    0% {
+        box-shadow: 0 0 15vw #ffdba9;
+    }
+    100% {
+        box-shadow: 0 0 20vw #ffd69c;
+    }
+}
+
 .Sun {
     z-index: -3;
+    position: absolute;
+    border-radius: 50%;
+    width: 14vw;
+    height: 14vw;
+    background: linear-gradient(to bottom, #fff8ed, #ffdba9);
+    will-change: transform;
+    box-shadow: 0 0 20vw #ffdba9;
+    animation: sun-glow 1.5s infinite alternate ease-in-out;
 }
 
 .ForegroundRocks {
@@ -87,7 +112,7 @@ a {
 
 .AboutMe {
     width: 100%;
-    background: linear-gradient(to bottom, #32071C, #29212d);
+    background: linear-gradient(to bottom, #32071C, #171e25);
     z-index: 200;
     position: relative;
     display: flex;
@@ -308,7 +333,7 @@ Profile link elements
     padding: 10px;
     padding-left: 14px;
     padding-right: 14px;
-    background-color: #855f6f;
+    background-color: #4a2434;
     border-radius: 32px;
     transition: box-shadow 0.3s ease-in-out, background-color 0.15s ease-in-out;
     /*outline: 0px solid #634753;*/
@@ -316,7 +341,7 @@ Profile link elements
 }
 
 .ProfileContainer:hover {
-    background-color: #be859c;
+    background-color: #6b3b4b;
     /*box-shadow: 0 2px 5px -2px rgb(255, 193, 193)*/
 }
 

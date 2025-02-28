@@ -1,0 +1,13 @@
+body {
+	background-color: #32071C;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+p {
+	color: #f0b9bf;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 25px;
+}
