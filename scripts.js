@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let scrollHeight = document.documentElement.scrollHeight;
         let allowedScrollHeight = scrollHeight / 3;
 
+        //TODO: HI
+
         foregroundRocks.style.transform = `translateY(${clamp(scrollY * 0.35, 0, allowedScrollHeight)}px)`;
         backgroundRocks.style.transform = `translateY(${clamp(scrollY * 0.45, 0, allowedScrollHeight)}px)`;
         topClouds.style.transform = `translateY(${clamp(scrollY * 0.85, 0, allowedScrollHeight)}px)`;
