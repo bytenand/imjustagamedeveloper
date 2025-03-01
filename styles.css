@@ -19,7 +19,8 @@ a {
     position: absolute;
 }
 
-.ForegroundRocks, .BackgroundRocks, .TopClouds, .BottomClouds, .Mountains {
+.ForegroundRocks, .BackgroundRocks, .TopClouds, .BottomClouds {
+    width: 100%;
     max-width: 100%;
     height: auto;
     color: #32071C;
@@ -46,28 +47,28 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vw;
+    height: 60vw;
     width: 100%;
 }
 
 @keyframes sun-glow {
     0% {
-        box-shadow: 0 0 15vw #ffdba9;
+        box-shadow: 0 0 15vw 5vw #ffdba9;
     }
     100% {
-        box-shadow: 0 0 20vw #ffd69c;
+        box-shadow: 0 0 20vw 7vw #ffd69c;
     }
 }
 
 .Sun {
-    z-index: -3;
+    z-index: -25;
     position: absolute;
     border-radius: 50%;
     width: 14vw;
     height: 14vw;
     background: linear-gradient(to bottom, #fff8ed, #ffdba9);
     will-change: transform;
-    box-shadow: 0 0 20vw #ffdba9;
+    box-shadow: 0 0 20vw 7vw #ffd69c;
     animation: sun-glow 1.5s infinite alternate ease-in-out;
 }
 
@@ -80,7 +81,7 @@ a {
 }
 
 .SkyscapeFallback {
-    z-index: -5;
+    z-index: -51;
     background: #D094BE;
     width: 100%;
     height: 100%;
@@ -88,7 +89,7 @@ a {
 }
 
 .Skyscape {
-    z-index: -4;
+    z-index: -50;
     background: linear-gradient(to bottom, #D094BE, #FF9479, #FF5050);
     width: 100%;
     height: 70vw;
@@ -106,8 +107,76 @@ a {
     overflow: hidden;
 }
 
-.Mountains {
+.Mountains1Container, .Mountains2Container, .Mountains3Container, .Mountains4Container, .Mountains5Container, .Mountains6Container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vw;
+    width: 100%;
+}
+
+.Mountains1Container {
+    z-index: -5;
+    height: 120vw;
+}
+
+.Mountains2Container {
+    z-index: -6;
+    height: 110vw;
+}
+
+.Mountains3Container {
+    z-index: -7;
+    height: 105vw;
+}
+
+.Mountains4Container {
+    z-index: -8;
+    height: 85vw;
+}
+
+.Mountains5Container {
+    z-index: -9;
+    height: 83vw;
+}
+
+.Mountains6Container {
+    z-index: -10;
+    height: 73vw;
+}
+
+.Mountains1, .Mountains2, .Mountains3, .Mountains4, .Mountains5, .Mountains6 {
     z-index: -2;
+    width: 47vw;
+    height: auto;
+    color: #32071C;
+    position: absolute;
+    will-change: transform;
+}
+
+.Mountains1 {
+    z-index: -2;
+}
+
+.Mountains2 {
+    z-index: -3;
+}
+
+.Mountains3 {
+    z-index: -4;
+}
+
+.Mountains4 {
+    z-index: -5;
+}
+
+.Mountains5 {
+    z-index: -6;
+}
+
+.Mountains6 {
+    z-index: -7;
 }
 
 .AboutMe {
