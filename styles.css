@@ -13,15 +13,14 @@ a {
     text-decoration: none;
 }
 
-.GroundContainer {
+.foreground-container {
     width: 100%;
     height: 100vh;
     position: absolute;
 }
 
-.ForegroundRocks, .BackgroundRocks, .TopClouds, .BottomClouds {
+.foreground-cliff-1, .foreground-cliff-2, .top-cloud-container, .bottom-cloud-container {
     width: 100%;
-    max-width: 100%;
     height: auto;
     color: #32071C;
     position: absolute;
@@ -31,7 +30,7 @@ a {
     will-change: transform;
 }
 
-.Foreground {
+.foreground-trees {
     width: 100%;
     height: auto;
     z-index: 25;
@@ -52,7 +51,7 @@ a {
     }
 }
 
-.CaveLanternLight {
+.cave-lantern-light {
     position: absolute;
     z-index: 40;
     left: 36.5vw;
@@ -61,7 +60,7 @@ a {
     animation: lantern-glow 1.5s infinite alternate ease-in-out;
 }
 
-.CaveContainer {
+.cave-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,37 +72,12 @@ a {
     margin-top: -1vw;
 }
 
-.CaveSection1, .CaveSection2, .CaveSection3, .CaveSection4, .CaveSection5 {
+.cave-foreground-2, .cave-middleground-1, .cave-middleground-2, .cave-background-1, .cave-background-2 {
     height: auto;
     position: absolute;
 }
 
-.CaveSection1 {
-    z-index: 35;
-    width: 97%;
-}
-
-.CaveSection2 {
-    z-index: 34;
-    width: 95%;
-}
-
-.CaveSection3 {
-    z-index: 33;
-    width: 92%;
-}
-
-.CaveSection4 {
-    z-index: 32;
-    width: 89%;
-}
-
-.CaveSection5 {
-    z-index: 31;
-    width: 86%;
-}
-
-.Cave {
+.cave-foreground-1 {
     width: 100%;
     height: auto;
     z-index: 50;
@@ -113,7 +87,32 @@ a {
     display: block;
 }
 
-.SunContainer {
+.cave-foreground-2 {
+    z-index: 35;
+    width: 97%;
+}
+
+.cave-middleground-1 {
+    z-index: 34;
+    width: 95%;
+}
+
+.cave-middleground-2 {
+    z-index: 33;
+    width: 92%;
+}
+
+.cave-background-1 {
+    z-index: 32;
+    width: 89%;
+}
+
+.cave-background-2 {
+    z-index: 31;
+    width: 86%;
+}
+
+.sun-container {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -131,7 +130,7 @@ a {
     }
 }
 
-.Sun {
+.sun {
     z-index: -25;
     position: absolute;
     border-radius: 50%;
@@ -143,15 +142,15 @@ a {
     animation: sun-glow 1.5s infinite alternate ease-in-out;
 }
 
-.ForegroundRocks {
+.foreground-cliff-1 {
     z-index: -1;
 }
 
-.BackgroundRocks {
+.foreground-cliff-2 {
     z-index: -2;
 }
 
-.SkyscapeFallback {
+.skyscape-fallback {
     z-index: -51;
     background: #D094BE;
     width: 100%;
@@ -159,7 +158,7 @@ a {
     position: absolute;
 }
 
-.Skyscape {
+.skyscape {
     z-index: -50;
     background: linear-gradient(to bottom, #D094BE, #FF9479, #FF5050);
     width: 100%;
@@ -167,55 +166,56 @@ a {
     position: absolute;
 }
 
-.TopClouds {
+.top-cloud-container {
     opacity: 1;
     z-index: -4;
     width: 100%;
     height: 10vw;
 }
 
-.BottomClouds {
+.bottom-cloud-container {
     z-index: -3;
     width: 100%;
     height: 10vw;
 }
 
-.Cloud1, .Cloud2, .Cloud3, .Cloud4, .Cloud5 {
+.cloud-1, .cloud-2, .cloud-3, .cloud-4, .cloud-5 {
     height: auto;
     width: 14vw;
     position: absolute;
 }
 
-.Cloud1 {
+.cloud-1 {
     left: 25vw;
     top: 4vw;
 }
 
-.Cloud2 {
+.cloud-2 {
     width: 22vw;
     left: 2vw;
     top: 5vw;
 }
 
-.Cloud3 {
+.cloud-3 {
     width: 7vw;
     right: 14vw;
     top: 4vw;
 }
 
-.Cloud4 {
+.cloud-4 {
     width: 22vw;
     left: 21vw;
     top: 17vw;
 }
 
-.Cloud5 {
+.cloud-5 {
     width: 14vw;
     right: 1vw;
     top: 7vw;
 }
 
-.Mountains1Container, .Mountains2Container, .Mountains3Container, .Mountains4Container, .Mountains5Container, .Mountains6Container {
+.foreground-mountains-1-container, .foreground-mountains-2-container, .middleground-mountains-1-container,
+.middleground-mountains-2-container, .background-mountains-1-container, .background-mountains-2-container {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -224,37 +224,37 @@ a {
     width: 100%;
 }
 
-.Mountains1Container {
+.foreground-mountains-1-container {
     z-index: -5;
     height: 120vw;
 }
 
-.Mountains2Container {
+.foreground-mountains-2-container {
     z-index: -6;
     height: 110vw;
 }
 
-.Mountains3Container {
+.middleground-mountains-1-container {
     z-index: -7;
     height: 105vw;
 }
 
-.Mountains4Container {
+.middleground-mountains-2-container {
     z-index: -8;
     height: 85vw;
 }
 
-.Mountains5Container {
+.background-mountains-1-container {
     z-index: -9;
     height: 83vw;
 }
 
-.Mountains6Container {
+.background-mountains-2-container {
     z-index: -10;
     height: 73vw;
 }
 
-.Mountains1, .Mountains2, .Mountains3, .Mountains4, .Mountains5, .Mountains6 {
+.foreground-mountains-1, .foreground-mountains-2, .middleground-mountains-1, .middleground-mountains-2, .background-mountains-1, .background-mountains-2 {
     z-index: -2;
     width: 47vw;
     height: auto;
@@ -263,31 +263,31 @@ a {
     will-change: transform;
 }
 
-.Mountains1 {
+.foreground-mountains-1 {
     z-index: -2;
 }
 
-.Mountains2 {
+.foreground-mountains-2 {
     z-index: -3;
 }
 
-.Mountains3 {
+.middleground-mountains-1 {
     z-index: -4;
 }
 
-.Mountains4 {
+.middleground-mountains-2 {
     z-index: -5;
 }
 
-.Mountains5 {
+.background-mountains-1 {
     z-index: -6;
 }
 
-.Mountains6 {
+.background-mountains-2 {
     z-index: -7;
 }
 
-.AboutMe {
+.about-me-container {
     width: 100%;
     background: linear-gradient(to bottom, #32071C, #171e25);
     z-index: 200;
@@ -298,7 +298,7 @@ a {
     flex-direction: column;
 }
 
-.Topbar {
+.topbar-container {
     position: absolute;
     width: 100%;
     display: flex;
@@ -313,13 +313,13 @@ a {
     100% { opacity: 0.5; }
 }
 
-.ArrowDown {
+.arrow-down-small {
     width: 2.5vw;
     height: 1.5vw;
     animation: arrow-opacity-filter 1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.HeaderText {
+.header-text {
     color: rgb(255 184 184);
     font-family: Poppins;
     font-weight: 600;
@@ -332,7 +332,7 @@ a {
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.AboutMeText, .LongAboutMeText, .RegularText, .CaveText {
+.about-me-text, .long-about-me-text, .regular-text, .header-cave-text, .cave-text, .website-link-text, .website-other-page-text {
     color: #f0b9bf;
     font-family: Poppins;
     font-weight: 400;
@@ -342,10 +342,50 @@ a {
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.RegularText {
+.regular-text {
     margin-bottom: auto;
 }
 
+.header-cave-text {
+    font-size: 48px;
+    font-weight: 700;
+    color: rgb(242 178 180);
+    margin-top: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.cave-text {
+    font-size: 26px;
+    font-weight: 400;
+    color: rgb(193 166 166);
+    margin-top: -1vh;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.website-link-text {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(193 166 166);
+    margin-top: -1vh;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.website-other-page-text {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(193 166 166);
+    text-decoration: underline;
+}
 
 /*
 
@@ -356,13 +396,21 @@ Hero content elements
 */
 
 
-.HeroContainer {
+.hero-text-spacer {
+    background: #32071C;
+    width: 100%;
+    height: 12vw;
+    z-index: 38;
+    position: relative;
+}
+
+.hero-text-container {
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-.JustADevLabel, .FullstackGameLabel, .DeveloperLabel {
+.just-a-dev-label, .fullstack-game-label, .developer-label {
     margin-top: 0;
     margin-left: 0;
     font-family: Poppins;
@@ -373,15 +421,15 @@ Hero content elements
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.JustADevLabel {
+.just-a-dev-label {
     color: rgb(255 24 78);
 }
 
-.FullstackGameLabel {
+.fullstack-game-label {
     color: rgb(236 60 116);
 }
 
-.DeveloperLabel {
+.developer-label {
     color: rgb(226 130 209);
 }
 
@@ -393,7 +441,7 @@ About me container and child elements
 
 */
 
-.AboutMeContainer {
+.about-me-content {
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
@@ -402,7 +450,7 @@ About me container and child elements
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.ButtonContainer {
+.button-set-container {
     margin: 0;
     flex-direction: column;
     display: flex;
@@ -412,7 +460,7 @@ About me container and child elements
     margin-bottom: 15px;
 }
 
-.SkillButton {
+.skill-set-button {
     border: #32103e;
     padding: 6px;
     margin-top: 10px;
@@ -429,20 +477,12 @@ About me container and child elements
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.SkillButton:hover {
+.skill-set-button:hover {
     color: #ffc0d9ba;
     background-color: #8c3c5580;
 }
 
-.LongExperienceContainer {
-    flex-direction: column;
-    display: flex;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 100px;
-}
-
-.LongAboutMeText {
+.long-about-me-text {
     margin-left: 4%;
     margin-right: 4%;
     margin-top: 68px;
@@ -451,15 +491,24 @@ About me container and child elements
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.BriefAboutMeContainer {
+.brief-about-me-content {
     flex: 0.85;
 }
 
-.LongAboutMeContainer {
+.long-about-me-content {
     flex: 2;
 }
 
-.BottomContentContainer {
+.skill-set-button-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    margin-bottom: 100px;
+}
+
+.bottom-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -469,7 +518,7 @@ About me container and child elements
     background: linear-gradient(to bottom, #32071C, #32071C);
 }
 
-.CaveTop {
+.bottom-profile-section-split {
     max-width: 100%;
     width: 100%;
     height: auto;
@@ -490,7 +539,7 @@ Profile link elements
 */
 
 
-.ProfileLinkContainer {
+.profile-link-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -498,7 +547,7 @@ Profile link elements
     flex-wrap: wrap;
 }
 
-.ProfileContainer {
+.profile-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -511,21 +560,18 @@ Profile link elements
     background-color: #4a2434;
     border-radius: 32px;
     transition: box-shadow 0.3s ease-in-out, background-color 0.15s ease-in-out;
-    /*outline: 0px solid #634753;*/
-    /*box-shadow: 0 0 rgba(255, 255, 255, 0);*/
 }
 
-.ProfileContainer:hover {
+.profile-container:hover {
     background-color: #6b3b4b;
-    /*box-shadow: 0 2px 5px -2px rgb(255, 193, 193)*/
 }
 
-.ProfileImage {
+.profile-image {
     width: 24px;
     height: auto;
 }
 
-.ProfileLinkText {
+.profile-link-text {
     color: white;
     font-weight: 500;
     font-family: Poppins;

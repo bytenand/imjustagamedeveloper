@@ -3,23 +3,24 @@ function clamp(x, min, max) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const parallaxClasses = [".JustADevLabel", ".DeveloperLabel", ".FullstackGameLabel", ".AboutMeText", ".HeaderText", ".LongAboutMeText", ".SkillButton"];
+    const parallaxClasses = [".just-a-dev-label", ".developer-label", ".fullstack-game-label", ".about-me-text", ".header-text", ".long-about-me-text", ".skill-set-button"];
     const stopPoint = window.innerHeight;
 
-    const topClouds = document.querySelector(".TopClouds")
-    const foregroundRocks = document.querySelector(".ForegroundRocks")
-    const backgroundRocks = document.querySelector(".BackgroundRocks")
-    const bottomClouds = document.querySelector(".BottomClouds")
+    const foregroundCliff1= document.querySelector(".foreground-cliff-1")
+    const foregroundCliff2 = document.querySelector(".foreground-cliff-2")
 
-    const mountains1 = document.querySelector(".Mountains1")
-    const mountains2 = document.querySelector(".Mountains2")
-    const mountains3 = document.querySelector(".Mountains3")
-    const mountains4 = document.querySelector(".Mountains4")
-    const mountains5 = document.querySelector(".Mountains5")
-    const mountains6 = document.querySelector(".Mountains6")
+    const topCloudContainer = document.querySelector(".top-cloud-container")
+    const bottomCloudContainer = document.querySelector(".bottom-cloud-container")
 
-    const sun = document.querySelector(".Sun")
-    const skyscape = document.querySelector(".Skyscape")
+    const foregroundMountains1 = document.querySelector(".foreground-mountains-1")
+    const foregroundMountains2 = document.querySelector(".foreground-mountains-2")
+    const middlegroundMountains1 = document.querySelector(".middleground-mountains-1")
+    const middlegroundMountains2 = document.querySelector(".middleground-mountains-2")
+    const backgroundMountains1 = document.querySelector(".background-mountains-1")
+    const backgroundMountains2 = document.querySelector(".background-mountains-2")
+
+    const sun = document.querySelector(".sun")
+    const skyscape = document.querySelector(".skyscape")
     
     document.addEventListener("scroll", function () {
         let scrollY = window.scrollY;
@@ -27,19 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
         let scrollHeight = document.documentElement.scrollHeight;
         let allowedScrollHeight = scrollHeight / 3;
 
-        foregroundRocks.style.transform = `translateY(${clamp(scrollY * 0.35, 0, allowedScrollHeight)}px)`;
-        backgroundRocks.style.transform = `translateY(${clamp(scrollY * 0.45, 0, allowedScrollHeight)}px)`;
-        topClouds.style.transform = `translateY(${clamp(scrollY * 0.85, 0, allowedScrollHeight)}px)`;
-        bottomClouds.style.transform = `translateY(${clamp(scrollY * 0.75, 0, allowedScrollHeight)}px)`;
+        foregroundCliff1.style.transform = `translateY(${clamp(scrollY * 0.35, 0, allowedScrollHeight)}px)`;
+        foregroundCliff2.style.transform = `translateY(${clamp(scrollY * 0.45, 0, allowedScrollHeight)}px)`;
+        topCloudContainer.style.transform = `translateY(${clamp(scrollY * 0.85, 0, allowedScrollHeight)}px)`;
+        bottomCloudContainer.style.transform = `translateY(${clamp(scrollY * 0.75, 0, allowedScrollHeight)}px)`;
         sun.style.transform = `translateY(${clamp(scrollY * 0.8, 0, allowedScrollHeight)}px)`;
         skyscape.style.transform = `translateY(${clamp(scrollY * 0.2, 0, allowedScrollHeight)}px)`;
 
-        mountains1.style.transform = `translateY(${clamp(scrollY * 0.3, 0, allowedScrollHeight)}px)`;
-        mountains2.style.transform = `translateY(${clamp(scrollY * 0.42, 0, allowedScrollHeight)}px)`;
-        mountains3.style.transform = `translateY(${clamp(scrollY * 0.52, 0, allowedScrollHeight)}px)`;
-        mountains4.style.transform = `translateY(${clamp(scrollY * 0.625, 0, allowedScrollHeight)}px)`;
-        mountains5.style.transform = `translateY(${clamp(scrollY * 0.7, 0, allowedScrollHeight)}px)`;
-        mountains6.style.transform = `translateY(${clamp(scrollY * 0.775, 0, allowedScrollHeight)}px)`;
+        foregroundMountains1.style.transform = `translateY(${clamp(scrollY * 0.3, 0, allowedScrollHeight)}px)`;
+        foregroundMountains2.style.transform = `translateY(${clamp(scrollY * 0.42, 0, allowedScrollHeight)}px)`;
+        middlegroundMountains1.style.transform = `translateY(${clamp(scrollY * 0.52, 0, allowedScrollHeight)}px)`;
+        middlegroundMountains2.style.transform = `translateY(${clamp(scrollY * 0.625, 0, allowedScrollHeight)}px)`;
+        backgroundMountains1.style.transform = `translateY(${clamp(scrollY * 0.7, 0, allowedScrollHeight)}px)`;
+        backgroundMountains2.style.transform = `translateY(${clamp(scrollY * 0.775, 0, allowedScrollHeight)}px)`;
 
         parallaxClasses.forEach(className => {
             document.querySelectorAll(className).forEach(element => {
@@ -56,31 +57,39 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        document.querySelectorAll(".CaveSection1, .CaveSection2, .CaveSection3, .CaveSection4, .CaveSection5, .CaveLanternLight").forEach(el => {
-            let rect = el.getBoundingClientRect();
+        document.querySelectorAll(".cave-foreground-2, .cave-middleground-1, .cave-middleground-2, .cave-background-1, .cave-background-2, .cave-lantern-light").forEach(el => {
+            let parent = el.closest(".cave-container");
+            if (!parent) return;
+    
+            let parentRect = parent.getBoundingClientRect();
             let viewportHeight = window.innerHeight;
+            let viewportWidth = window.innerWidth;
+    
+            let speed = parseFloat(el.dataset.speed) || 1;
 
-            let speed = parseFloat(el.dataset.speed) || 20;
-            let progress = (rect.top + rect.height / 2 - viewportHeight / 2) / (viewportHeight / 2);
-            let offset = progress * speed;
+            let aspectRatio = viewportWidth / viewportHeight;
+            let intensityFactor = Math.min(1, aspectRatio * 1.5);
 
+            let progress = (parentRect.top + parentRect.height / 2 - viewportHeight / 2) / (viewportHeight / (intensityFactor * 1.5));
+            let offset = progress * speed * (viewportHeight / 100) * intensityFactor;
+            
             el.style.transform = `translateY(${offset}px)`;
         });
     }, { passive: true });
 
     function adjustMargins() {
         let innerWidth = window.innerWidth
-        let aboutMeContainer = document.querySelector(".AboutMeContainer");
+        let aboutMeContent = document.querySelector(".about-me-content");
 
         if (innerWidth < 1362) {
-            aboutMeContainer.style.marginLeft = "5%";
-            aboutMeContainer.style.marginRight = "5%";
+            aboutMeContent.style.marginLeft = "5%";
+            aboutMeContent.style.marginRight = "5%";
         } else {
-            aboutMeContainer.style.marginLeft = "15%";
-            aboutMeContainer.style.marginRight = "15%";
+            aboutMeContent.style.marginLeft = "15%";
+            aboutMeContent.style.marginRight = "15%";
         }
 
-        let justADevLabel = document.querySelector(".JustADevLabel");
+        let justADevLabel = document.querySelector(".just-a-dev-label");
         if (innerWidth < 500) {
             justADevLabel.style.marginTop = "13vh";
         } else if (innerWidth < 1100) {
