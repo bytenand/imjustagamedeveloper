@@ -61,13 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
             let viewportHeight = window.innerHeight;
 
             let speed = parseFloat(el.dataset.speed) || 20;
-
-            // Calculate normalized position: -1 (top), 0 (middle), 1 (bottom)
             let progress = (rect.top + rect.height / 2 - viewportHeight / 2) / (viewportHeight / 2);
-    
-            // Adjust transform based on progress (tweak multiplier as needed)
-            let offset = progress * speed; // Adjust 20 to control effect strength
-            el.style.transform = `translateY(${clamp(offset, -1000, 100000)}px)`;
+            let offset = progress * speed;
+
+            el.style.transform = `translateY(${offset}px)`;
         });
     }, { passive: true });
 
