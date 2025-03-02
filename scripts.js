@@ -55,6 +55,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
+
+        document.querySelectorAll(".CaveSection1, .CaveSection2, .CaveSection3, .CaveSection4, .CaveSection5, .CaveLanternLight").forEach(el => {
+            let rect = el.getBoundingClientRect();
+            let viewportHeight = window.innerHeight;
+
+            let speed = parseFloat(el.dataset.speed) || 20;
+
+            // Calculate normalized position: -1 (top), 0 (middle), 1 (bottom)
+            let progress = (rect.top + rect.height / 2 - viewportHeight / 2) / (viewportHeight / 2);
+    
+            // Adjust transform based on progress (tweak multiplier as needed)
+            let offset = progress * speed; // Adjust 20 to control effect strength
+            el.style.transform = `translateY(${clamp(offset, 0, 100000)}px)`;
+        });
     }, { passive: true });
 
     function adjustMargins() {
