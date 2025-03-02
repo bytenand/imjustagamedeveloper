@@ -62,7 +62,12 @@ a {
 }
 
 .CaveContainer {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
     overflow: hidden;
     clip-path: inset(0 0 0 0);
     margin-top: -1vw;
@@ -164,14 +169,51 @@ a {
 }
 
 .TopClouds {
-    opacity: 0.7;
+    opacity: 1;
     z-index: -4;
-    overflow: hidden;
+    width: 100%;
+    height: 10vw;
 }
 
 .BottomClouds {
     z-index: -3;
-    overflow: hidden;
+    width: 100%;
+    height: 10vw;
+}
+
+.Cloud1, .Cloud2, .Cloud3, .Cloud4, .Cloud5 {
+    height: auto;
+    width: 14vw;
+    position: absolute;
+}
+
+.Cloud1 {
+    left: 25vw;
+    top: 4vw;
+}
+
+.Cloud2 {
+    width: 22vw;
+    left: 2vw;
+    top: 5vw;
+}
+
+.Cloud3 {
+    width: 7vw;
+    right: 14vw;
+    top: 4vw;
+}
+
+.Cloud4 {
+    width: 22vw;
+    left: 21vw;
+    top: 17vw;
+}
+
+.Cloud5 {
+    width: 14vw;
+    right: 1vw;
+    top: 7vw;
 }
 
 .Mountains1Container, .Mountains2Container, .Mountains3Container, .Mountains4Container, .Mountains5Container, .Mountains6Container {
@@ -267,7 +309,7 @@ a {
     margin-top: 5vw;
 }
 
-@keyframes bgColorShift {
+@keyframes arrow-opacity-filter {
     0% { opacity: 1; }
     100% { opacity: 0.5; }
 }
@@ -275,7 +317,7 @@ a {
 .ArrowDown {
     width: 2.5vw;
     height: 1.5vw;
-    animation: bgColorShift 1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation: arrow-opacity-filter 1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .HeaderText {
@@ -334,7 +376,6 @@ Hero content elements
 
 .JustADevLabel {
     color: rgb(255 24 78);
-    margin-top: 10vh;
 }
 
 .FullstackGameLabel {
@@ -358,8 +399,6 @@ About me container and child elements
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
-    margin-left: 15%;
-    margin-right: 15%;
     margin-bottom: -150px;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -421,14 +460,14 @@ About me container and child elements
     flex: 2;
 }
 
-.CaveContainer {
+.BottomContentContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: auto;
     width: 100%;
-    background: linear-gradient(to bottom, #32071C, #15020b);
+    background: linear-gradient(to bottom, #32071C, #32071C);
 }
 
 .CaveTop {
