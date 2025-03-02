@@ -32,7 +32,37 @@ a {
 }
 
 .Foreground {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    z-index: 25;
+    position: relative;
+    overflow: clip;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-top: 10vw;
+}
+
+@keyframes lantern-glow {
+    0% {
+        box-shadow: 0 0 11vw 3.2vw #ffc97e;
+    }
+    100% {
+        box-shadow: 0 0 13vw 3.8vw #ffcf8b;
+    }
+}
+
+.CaveLanternLight {
+    position: absolute;
+    z-index: 1000;
+    left: 36.5vw;
+    top: 117.5vw;
+    box-shadow: 0 0 13vw 3.8vw #ffc97e;
+    animation: lantern-glow 1.5s infinite alternate ease-in-out;
+}
+
+.Cave {
+    width: 100%;
     height: auto;
     z-index: 25;
     position: relative;
