@@ -54,7 +54,7 @@ a {
 
 .CaveLanternLight {
     position: absolute;
-    z-index: 35;
+    z-index: 40;
     left: 36.5vw;
     top: 117.5vw;
     box-shadow: 0 0 13vw 3.8vw #ffc97e;
@@ -63,6 +63,9 @@ a {
 
 .CaveContainer {
     display: block;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+    margin-top: -1vw;
 }
 
 .CaveSection1, .CaveSection2, .CaveSection3, .CaveSection4, .CaveSection5 {
@@ -104,7 +107,6 @@ a {
     margin: 0;
     padding: 0;
     display: block;
-    margin-top: -1vw;
 }
 
 .SunContainer {
@@ -138,11 +140,11 @@ a {
 }
 
 .ForegroundRocks {
-    z-index: 2;
+    z-index: -1;
 }
 
 .BackgroundRocks {
-    z-index: 1;
+    z-index: -2;
 }
 
 .SkyscapeFallback {
@@ -163,12 +165,12 @@ a {
 
 .TopClouds {
     opacity: 0.7;
-    z-index: 0;
+    z-index: -4;
     overflow: hidden;
 }
 
 .BottomClouds {
-    z-index: -1;
+    z-index: -3;
     overflow: hidden;
 }
 

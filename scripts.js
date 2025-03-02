@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
             // Adjust transform based on progress (tweak multiplier as needed)
             let offset = progress * speed; // Adjust 20 to control effect strength
-            el.style.transform = `translateY(${clamp(offset, 0, 100000)}px)`;
+            el.style.transform = `translateY(${clamp(offset, -1000, 100000)}px)`;
         });
     }, { passive: true });
 
