@@ -475,7 +475,6 @@ About me container and child elements
     background-color: #8c3c56;
     border-radius: 2px;
     cursor: pointer;
-    transition: 0.2s;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
