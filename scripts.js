@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let aspectRatio = viewportWidth / viewportHeight;
             let intensityFactor = Math.min(1, aspectRatio * 1.5);
 
-            let progress = (parentRect.top + parentRect.height / 2 - viewportHeight / 2) / (viewportHeight / (intensityFactor * 1.5));
+            let progress = (parentRect.top + parentRect.height / 2 - viewportHeight / 2) / (viewportHeight / (intensityFactor));
             let offset = progress * speed * (viewportHeight / 100) * intensityFactor;
             
             el.style.transform = `translateY(${offset}px)`;
@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             justADevLabel.style.marginTop = "0";
         }
-
     }
 
     adjustMargins();

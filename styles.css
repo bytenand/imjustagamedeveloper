@@ -402,6 +402,8 @@ Hero content elements
     height: 12vw;
     z-index: 38;
     position: relative;
+    margin-top: -1px;
+    margin-bottom: -1px;
 }
 
 .hero-text-container {
