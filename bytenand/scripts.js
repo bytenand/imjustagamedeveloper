@@ -3,7 +3,7 @@ function clamp(x, min, max) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const parallaxClasses = [".just-a-dev-label", ".developer-label", ".fullstack-game-label", ".about-me-text", ".header-text", ".long-about-me-text", ".skill-set-button"];
+    const parallaxClasses = [".just-a-dev-label", ".developer-label", ".fullstack-game-label", ".about-me-text", ".header-text", ".long-about-me-text", ".skill-set-button", ".long-my-work-text"];
     const stopPoint = window.innerHeight;
 
     const foregroundCliff1= document.querySelector(".foreground-cliff-1")
@@ -46,10 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll(className).forEach(element => {
                 let elementRect = element.getBoundingClientRect();
                 let elementTop = elementRect.top;
+                let elementBottom = elementRect.bottom
 
                 if (elementTop < stopPoint) {
                     let moveAmount = Math.min((stopPoint - elementTop) * 0.4, stopPoint / 8);
                     let opacityAmount = Math.min((stopPoint - elementTop) / stopPoint * 4, 1);
+
+                    console.log(elementTop - elementBottom, className)
 
                     element.style.transform = `translateY(-${moveAmount}px)`;
                     element.style.opacity = opacityAmount;

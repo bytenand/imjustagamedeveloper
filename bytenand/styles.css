@@ -332,7 +332,7 @@ a {
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.about-me-text, .long-about-me-text, .regular-text, .header-cave-text, .cave-text, .website-link-text, .website-other-page-text {
+.about-me-text, .long-about-me-text, .regular-text, .header-cave-text, .cave-text, .website-link-text, .website-other-page-text, .long-my-work-text {
     color: #f0b9bf;
     font-family: Poppins;
     font-weight: 400;
@@ -444,13 +444,18 @@ About me container and child elements
 
 */
 
-.about-me-content {
+.about-me-content, .my-work-content {
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
     margin-bottom: -150px;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.my-work-content {
+    margin-top: 12vw;
+    margin-bottom: 2vw;
 }
 
 .button-set-container {
@@ -484,13 +489,19 @@ About me container and child elements
     background-color: #8c3c5580;
 }
 
-.long-about-me-text {
+.long-about-me-text, .long-my-work-text {
     margin-left: 4%;
     margin-right: 4%;
     margin-top: 68px;
     margin-bottom: 50px;
     min-width: 260px;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.long-my-work-text {
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .brief-about-me-content {
